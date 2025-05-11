@@ -1,0 +1,229 @@
+/* styles.css */
+
+body {
+    font-family: Times New Roman, sans-serif;
+    background-color: #ccffcc;
+    margin: 0;
+    padding: 0;
+    color:#8A2BE2;
+}
+
+/* Add this container rule below body or at the top of layout rules */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    font-family: Times New Roman, sans-serif;
+    background-color: #ccffcc;
+    margin: 0;
+    padding: 0;
+    color:#8A2BE2
+}
+
+header {
+    background-color: #004d00;
+    color: orange;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    color: #B8860B;
+}
+
+
+nav { 
+    text-align: center;
+    font-weight: Bold;
+    font-size:1.5em;
+    padding: top 5px;
+    padding-bottom: 5px;
+    color: #8A2BE2; 
+}
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: #7FFFD4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+color: #8A2BE2;
+}
+section li{
+    color:#DC143C
+}
+section p {
+    color: #6495ED;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #004d00;
+    color: #ccffcc;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;  
+}
+
+img.screenshot{
+max-width: 100%;
+max-height: 500%;
+display: block;
+margin: 10 px auto;
+}
+
+img.screeshot2{
+max-width: 100%;
+max-height: 500%;
+display: block;
+margin: 10 px auto;
+}
+
+video {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+}
+
+section ul {
+    list-style-position: inside;
+    text-align: center;
+    padding: 0;
+}
+
+
+
+
+
+/* Responsive Design for desktop */
+@media (min-width: 600px) {
+    header {padding-left: 0;
+           text-align: center;}
+    h1 {font-size: 3em;}
+    
+    nav ul {flex-flow: row nowrap; 
+            justify-content: space-around;}
+    
+    nav li {border-bottom: none;}
+    
+    #home {background-image: url(home.jpg);}
+    
+    #gallery {background-image: url(gallery.jpg);}
+    
+    #contact {background-image: url(contact.jpg);}
+    
+    #flow {display: flex;
+          flex-direction: row;}
+    
+    #mobile {display:none;}
+    
+    #desktop {display: inline;}
+    
+    .details {display: flex;
+             flex-direction: row;}
+    
+    h4 {margin-left: 10%; 
+       margin-right: 10%;}
+    }
+    
+
+
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    @supports (display: grid) {
+    header {grid-area: header;}
+    nav {grid-area: nav;}
+    main{grid-area: main;}
+    footer{grid-area: footer;}
+    #wrapper {display: grid;
+              grid-template: 
+              "header header"
+              "nav    main"
+              "footer footer"
+              / 200px; }
+    
+    nav ul {flex-direction: column;}
+ 
+}
+}   
+
+
+
+
+
+/* Mobile Styles (for screens up to 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Improve readability */
+    }
+
+    .wrapper {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Make Navigation Mobile-Friendly */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #flow {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #mobile {
+        display: block;
+    }
+
+    #desktop {
+        display: none;
+    }
+
+    /* Stack Details Section for Mobile */
+    .details {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5%;
+    }
+
+    h4 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    /* Adjust Gallery Background */
+    #home{
+        height: 200px; /*Reduce height for mobile */
+        background-size: cover;
+    }
+
+
+    #gallery {
+        height: 200px; /* Reduce height for mobile */
+        background-size: cover;
+    }
+
+
+    #contact {
+        height: 200px; /* Reduced height for mobile */
+        background-size: cover; 
+    }
+}
