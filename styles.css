@@ -99,6 +99,64 @@ section ul {
     padding: 0;
 }
 
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.carousel img {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.carousel img:hover {
+    transform: scale(1.03);
+}
+
+.carousel-btn {
+    background-color: #222;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+    background-color: #444;
+}
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.interactive-btn {
+    padding: 12px 20px;
+    background-color: #FF4742;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.interactive-btn:hover {
+    background-color: #0000ff;
+    transform: scale(1.05);
+}
+
+
 
 
 
