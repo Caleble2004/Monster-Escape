@@ -25,12 +25,21 @@
     <a href ="https://caleble2022.itch.io/monster-escape"> Monster Escape </a>
     </section>
     <section>
-        <h3>Screenshots/Gameplay</h3>
+      <h2>Screenshots/Gameplay</h2>
         <video controls>
+            <button class="prev">&#10094;</button>
              <source src="gameplay.mp4" type="video/mp4">
+            <button class="next">&#10095;</button>
         </video>
-            <img src="gameplayscreenshot1.jpg" alt="Screenshot 1">
-            <img src="gameplayscreenshot2.jpg" alt="Screenshot 2">
+          <div class="carousel">
+        <button class="carousel-btn prev">&#10094;</button>
+        <img id="carousel-image" src="gameplayscreenshot1.jpg" alt="Game Screenshot1">
+        <button class="carousel-btn next">&#10095;</button>
+       </div>
+    <div class="buttons">
+        <a class="interactive-btn" href="https://caleble2022.itch.io/monster-escape" target="_blank">Play on Itch.io</a>
+        <a class="interactive-btn" href="https://vimeo.com/manage/videos/1083078301/f6a55cf3f7" target="_blank">Watch Trailer</a>
+    </div>
     </section>
     <section>
         <h2>Game Features</h2>
@@ -42,12 +51,33 @@
     </section>
     <section>
         <h2>Platform Information</h2>
-        <p>Available on:</p>
         <img src="Itch.io logo.jpg" alt="Itch.io logo" width="300">
     </section>
     <footer>
         <p>© 2025 Monster Escape</p>
     </footer>
    </div>
+    <script>
+    const images = ["gameplayscreenshot1.jpg", "gameplayscreenshot2.jpg"];
+    let currentIndex = 0;
+
+    const imageElement = document.getElementById("carousel-image");
+    const prevButton = document.querySelector(".carousel-btn.prev");
+    const nextButton = document.querySelector(".carousel-btn.next");
+
+    function updateImage() {
+        imageElement.src = images[currentIndex];
+    }
+
+    prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        updateImage();
+    });
+
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        updateImage();
+    });
+</script>
 </body>
 </html>
